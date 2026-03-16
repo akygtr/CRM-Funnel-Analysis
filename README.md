@@ -1,4 +1,4 @@
-# 🏆 GTM Sales Funnel Analysis & Win Propensity Model
+# GTM Sales Funnel Analysis & Win Propensity Model
 
 ![Domain](https://img.shields.io/badge/Domain-GTM%20%2F%20Revenue%20Analytics-blue)
 ![ML](https://img.shields.io/badge/ML-Classification-green)
