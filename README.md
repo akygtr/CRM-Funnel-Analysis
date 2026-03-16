@@ -87,19 +87,23 @@ This is one of the most in-demand data skill sets for Senior Data Analyst roles 
 
 ### Sales Funnel Overview
 ![Funnel Overview](01_funnel_overview.png)
-48% of all deals result in a Win, but only 5.7% are still in Prospecting — suggesting the pipeline is heavily back-loaded with limited early-stage deals being fed in.
+48% of all deals result in a Win, but only 5.7% are still in Prospecting suggesting the pipeline is heavily back-loaded with limited early-stage deals being fed in.
 
 ### Product Performance
 ![Product Win Rate](02_product_win_rate.png)
+GTX Plus Pro leads win rate at 49.5%, however GTK 500 significantly underperforms at 37.5% despite commanding the highest average deal value of ~$15,000,  indicating a high-value but hard-to-close product that may need sales enablement attention.
 
 ### Sales Team Leaderboard
 ![Team Leaderboard](03_team_leaderboard.png)
+Rocco Neubert's team leads with the highest win rate at 52%, yet Melvin Marxen's team generates the most total revenue at ~$2.1M despite a lower win rate , suggesting Melvin's team focuses on larger deals rather than volume
 
 ### Deal Velocity
 ![Deal Velocity](04_deal_velocity.png)
+Won deals have a median close time of ~58 days with a tight distribution, while Lost deals show a much wider spread with a median of ~13 days, indicating that deals which close quickly tend to either win fast or die fast, with no middle ground.
 
 ### Quarter-over-Quarter Trend
 ![QoQ Trend](05_qoq_trend.png)
+Revenue spiked sharply from $1.1M in Q1 2017 to $3.1M in Q2 — a 180% jump - before gradually declining through Q3 and Q4, suggesting a strong mid-year push that was not sustained, which warrants investigation into what drove Q2 performance.
 
 ### What Was Built
 A full exploratory analysis of the sales funnel covering:
