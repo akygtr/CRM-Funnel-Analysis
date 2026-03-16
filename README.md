@@ -87,6 +87,7 @@ This is one of the most in-demand data skill sets for Senior Data Analyst roles 
 
 ### Sales Funnel Overview
 ![Funnel Overview](01_funnel_overview.png)
+48% of all deals result in a Win, but only 5.7% are still in Prospecting — suggesting the pipeline is heavily back-loaded with limited early-stage deals being fed in.
 
 ### Product Performance
 ![Product Win Rate](02_product_win_rate.png)
