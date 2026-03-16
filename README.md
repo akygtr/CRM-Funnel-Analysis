@@ -1,5 +1,17 @@
-# CRM-Funnel-Analysis
-This project simulates the work of a Senior Data Analyst embedded in a GTM (Go-To-Market) / Revenue Operations team. It combines traditional funnel analytics with a machine learning layer to predict whether an active sales deal will be Won or Lost  enabling sales teams to prioritize their pipeline intelligently.
+# 🏆 GTM Sales Funnel Analysis & Win Propensity Model
+
+![Domain](https://img.shields.io/badge/Domain-GTM%20%2F%20Revenue%20Analytics-blue)
+![ML](https://img.shields.io/badge/ML-Classification-green)
+![Python](https://img.shields.io/badge/Python-3.10-yellow)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+
+---
+
+##  Project Summary
+
+This project simulates the work of a **Senior Data Analyst embedded in a GTM (Go-To-Market) / Revenue Operations team**. It combines traditional funnel analytics with a machine learning layer to predict whether an active sales deal will be **Won or Lost** — enabling sales teams to prioritize their pipeline intelligently.
+
+---
 
 ## Business Problem
 
@@ -13,19 +25,23 @@ Sales teams manage hundreds of open deals simultaneously but have limited bandwi
 1. *Where in our sales funnel are we losing the most deals?*
 2. *Which active deals are most likely to close — and why?*
 
+---
+
 ## How This Helps in a Real Work Environment
 
 | Stakeholder | How They Use This |
 |---|---|
 | **VP of Sales** | Reviews funnel drop-off to identify pipeline health issues |
 | **Sales Manager** | Uses deal scores to coach reps on which deals to prioritize |
-| **Sales Rep** | Focuses energy on 🟢 High probability deals |
+| **Sales Rep** | Focuses energy on  High probability deals |
 | **RevOps Analyst** | Monitors win rate trends by product, region, and manager |
 | **Data Team** | Maintains and retrains the model as new deals come in |
 
 In practice, the deal scoring output (Cell 16) would be pushed back into Salesforce or a BI tool like Looker so sales reps see win probabilities directly in their CRM — no need to open a notebook.
 
-## Domain
+---
+
+##  Domain
 
 **GTM Analytics / Revenue Operations (RevOps)**
 
@@ -37,7 +53,9 @@ This project sits at the intersection of:
 
 This is one of the most in-demand data skill sets for Senior Data Analyst roles at B2B SaaS and tech companies.
 
-## Dataset
+---
+
+##  Dataset
 
 **Source:** Maven Analytics — CRM Sales Opportunities  
 **Type:** Fictional B2B company selling computer hardware  
@@ -50,7 +68,9 @@ This is one of the most in-demand data skill sets for Senior Data Analyst roles 
 | `accounts.csv` | Company info — sector, revenue, employees, location |
 | `products.csv` | Product catalogue with series and price |
 
-## Tools & Technologies
+---
+
+##  Tools & Technologies
 
 | Tool | Purpose |
 |---|---|
@@ -61,7 +81,9 @@ This is one of the most in-demand data skill sets for Senior Data Analyst roles 
 | **XGBoost** | Gradient boosted tree classifier — primary model |
 | **Jupyter Notebook** | Development environment and presentation layer |
 
-## Part 1: Funnel Analysis (EDA)
+---
+
+##  Part 1 — Funnel Analysis (EDA)
 
 ### What Was Built
 A full exploratory analysis of the sales funnel covering:
@@ -79,7 +101,9 @@ A full exploratory analysis of the sales funnel covering:
 - Total Revenue Won by Manager
 - Median Days to Close by Stage
 
-## 🤖 Part 2 — Win Propensity ML Model
+---
+
+##  Part 2 — Win Propensity ML Model
 
 ### Problem Type
 **Binary Classification** — predict whether a closed deal outcome is `Won (1)` or `Lost (0)`
@@ -131,15 +155,15 @@ The trained model scores every **active deal** (still in Prospecting or Engaging
 
 | Tier | Win Probability | Action |
 |---|---|---|
-| 🟢 High | > 70% | Prioritize — close this week |
-| 🟡 Medium | 40–70% | Nurture — needs attention |
-| 🔴 Low | < 40% | Deprioritize or reassign |
+|  High | > 70% | Prioritize — close this week |
+|  Medium | 40–70% | Nurture — needs attention |
+|  Low | < 40% | Deprioritize or reassign |
 
 This output is the bridge between data science and sales execution — turning a model into a daily operational tool.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 crm_funnel_project/
@@ -157,7 +181,7 @@ crm_funnel_project/
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 ```bash
 # 1. Clone the repo
@@ -173,7 +197,7 @@ jupyter notebook funnel_analysis.ipynb
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 - [ ] Add SHAP values for per-deal explainability ("why does this deal score 82%?")
 - [ ] Build a Streamlit dashboard for non-technical sales managers
@@ -183,6 +207,6 @@ jupyter notebook funnel_analysis.ipynb
 
 ---
 
-## 👤 Author
+##  Author
 
 Built as part of a GTM Domain Knowledge learning path targeting **Senior Data Analyst** roles in B2B SaaS and Revenue Operations.
