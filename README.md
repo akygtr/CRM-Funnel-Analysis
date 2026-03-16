@@ -85,6 +85,9 @@ This is one of the most in-demand data skill sets for Senior Data Analyst roles 
 
 ##  Part 1 — Funnel Analysis (EDA)
 
+### Sales Funnel Overview
+![Funnel Overview](images/01_funnel_overview.png)
+
 ### What Was Built
 A full exploratory analysis of the sales funnel covering:
 
