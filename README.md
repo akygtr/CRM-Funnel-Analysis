@@ -103,16 +103,16 @@ Won deals have a median close time of ~58 days with a tight distribution, while 
 
 ### Quarter-over-Quarter Trend
 ![QoQ Trend](05_qoq_trend.png)
-Revenue spiked sharply from $1.1M in Q1 2017 to $3.1M in Q2 — a 180% jump - before gradually declining through Q3 and Q4, suggesting a strong mid-year push that was not sustained, which warrants investigation into what drove Q2 performance.
+Revenue spiked sharply from $1.1M in Q1 2017 to $3.1M in Q2 a 180% jump - before gradually declining through Q3 and Q4, suggesting a strong mid-year push that was not sustained, which warrants investigation into what drove Q2 performance.
 
 ### What Was Built
 A full exploratory analysis of the sales funnel covering:
 
-- **Stage conversion rates** — % of deals that progress through each stage
-- **Win/Loss by product** — which products close at the highest rate
-- **Sales team leaderboard** — win rate and revenue by manager and regional office
-- **Deal velocity** — how many days deals spend at each stage
-- **Quarter-over-quarter trends** — revenue and deal volume over time
+- **Stage conversion rates** : % of deals that progress through each stage
+- **Win/Loss by product** : which products close at the highest rate
+- **Sales team leaderboard** : win rate and revenue by manager and regional office
+- **Deal velocity** : how many days deals spend at each stage
+- **Quarter-over-quarter trends** : revenue and deal volume over time
 
 ### Key Metrics Tracked
 - Overall Win Rate
@@ -144,6 +144,10 @@ A full exploratory analysis of the sales funnel covering:
 
 ### Models Trained & Compared
 
+### Model Comparison
+![Model Comparison](06_model_comparison.png)
+
+
 | Model | Why It Was Included |
 |---|---|
 | **Logistic Regression** | Simple baseline — interpretable coefficients |
@@ -155,21 +159,25 @@ A full exploratory analysis of the sales funnel covering:
 
 ### How Models Were Trained
 
-1. **Data Preparation** — filtered to Won/Lost only (removed open deals), encoded categoricals with LabelEncoder, filled nulls
-2. **Train/Test Split** — 80/20 stratified split to preserve class balance
-3. **Cross Validation** — StratifiedKFold (5 folds) on training set for unbiased evaluation
-4. **Metrics Tracked** — AUC-ROC, F1 Score, Accuracy, Training Time
-5. **Hyperparameter Tuning** — RandomizedSearchCV (30 iterations) on top 2 models:
+### Tuned Model Evaluation
+![Confusion Matrix and ROC](07_confusion_roc.png)
+
+1. **Data Preparation** : filtered to Won/Lost only (removed open deals), encoded categoricals with LabelEncoder, filled nulls
+2. **Train/Test Split** : 80/20 stratified split to preserve class balance
+3. **Cross Validation** : StratifiedKFold (5 folds) on training set for unbiased evaluation
+4. **Metrics Tracked** : AUC-ROC, F1 Score, Accuracy, Training Time
+5. **Hyperparameter Tuning** : RandomizedSearchCV (30 iterations) on top 2 models:
    - Random Forest: tuned `n_estimators`, `max_depth`, `min_samples_split`, `max_features`
    - XGBoost: tuned `n_estimators`, `max_depth`, `learning_rate`, `subsample`, `colsample_bytree`
-6. **Final Evaluation** — Confusion Matrix + ROC Curve on held-out test set
+6. **Final Evaluation** : Confusion Matrix + ROC Curve on held-out test set
 
 ### Why AUC-ROC Was the Primary Metric
-Win/Loss data can be imbalanced. Accuracy alone is misleading — a model predicting "Lost" for everything scores high accuracy but is useless. AUC-ROC measures how well the model *ranks* deals by win probability regardless of threshold, which is exactly what deal scoring needs.
+Win/Loss data can be imbalanced. Accuracy alone is misleading, a model predicting "Lost" for everything scores high accuracy but is useless. AUC-ROC measures how well the model *ranks* deals by win probability regardless of threshold, which is exactly what deal scoring needs.
 
 ---
 
-## 📈 Output — Deal Scoring
+## Output — Deal Scoring
+![Deal Scoring Output](09_deal_scoring_output.png)
 
 The trained model scores every **active deal** (still in Prospecting or Engaging stage) with a win probability and assigns a tier:
 
@@ -179,7 +187,7 @@ The trained model scores every **active deal** (still in Prospecting or Engaging
 |  Medium | 40–70% | Nurture — needs attention |
 |  Low | < 40% | Deprioritize or reassign |
 
-This output is the bridge between data science and sales execution — turning a model into a daily operational tool.
+This output is the bridge between data science and sales execution, turning a model into a daily operational tool.
 
 ---
 
