@@ -88,6 +88,18 @@ This is one of the most in-demand data skill sets for Senior Data Analyst roles 
 ### Sales Funnel Overview
 ![Funnel Overview](01_funnel_overview.png)
 
+### Product Performance
+![Product Win Rate](02_product_win_rate.png)
+
+### Sales Team Leaderboard
+![Team Leaderboard](03_team_leaderboard.png)
+
+### Deal Velocity
+![Deal Velocity](04_deal_velocity.png)
+
+### Quarter-over-Quarter Trend
+![QoQ Trend](05_qoq_trend.png)
+
 ### What Was Built
 A full exploratory analysis of the sales funnel covering:
 
